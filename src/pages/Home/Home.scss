@@ -1,0 +1,69 @@
+@import "../../styles/mixing.scss" ; 
+@import "../../styles/variables.scss";
+
+
+.home {
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(4 , minmax(180px , auto));
+    grid-auto-flow: dense;
+
+    .box {
+        border: 2px solid $soft-bg;
+        border-radius: 6px;
+        padding: 20px;
+    }
+
+    .box-1 {
+        grid-row: span 3;
+        grid-column: span 1 ;
+        h1 {
+            margin-bottom: 20px;
+            color: $main-color;
+        }
+        .topDealList {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .deal {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                color: $main-color;
+                .img {
+                    @include img-rounded(50px)
+                }
+                .info {
+                    span {
+                        display: block;
+                    }
+                    span:first-child {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                    span:last-child {
+                        font-size: 12px;
+                    }
+                }
+                .amount {
+                    margin-left: auto;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .box-4 {
+        grid-row: span 3;
+        grid-column: span 1 ;
+    }
+
+    .box-7 {
+        grid-row: span 2;
+        grid-column: span 2 ;
+    }
+}

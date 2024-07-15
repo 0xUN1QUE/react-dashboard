@@ -1,0 +1,98 @@
+.show {
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+
+    .view {
+        flex: 1;
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            img {
+                border-radius: 20%;
+                width: 100px;
+                height: 100px;
+            }
+            button {
+                padding: 10px 15px;
+                border-radius: 6px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .deatails {
+            margin: 20px 0;
+            .item {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+                .label {
+                    font-weight: bold;
+                }
+                .value {
+                    font-style: 14px;
+                }
+            }
+        }
+
+        hr {
+            width: 90%;
+            margin: 20px auto;
+            border: 0.5px solid gray;
+        }
+
+        .chart {
+            height: 400px;
+            width: 100%;
+        }
+
+    }
+
+    .timeline {
+        flex: 1;
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            position: relative;
+
+            li {
+                position: relative;
+                background-color: #36374A;
+                padding: 20px;
+                margin-bottom: 20px;
+
+                p {
+                    margin-bottom: 10px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%);
+                    left: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #F45B69;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: -1px;
+                height: 100%;
+                width: 3px;
+                background-color: #F45B69;
+            }
+        }
+    }
+}

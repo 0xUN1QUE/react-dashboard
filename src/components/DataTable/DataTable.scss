@@ -1,0 +1,31 @@
+@import '../../styles/mixing.scss' ;
+.DataTable {
+
+    .DataGrid {
+        background-color: white;
+        padding: 20px;
+        
+        .MuiDataGrid-toolbarContainer {
+            flex-direction: row-reverse;
+        }
+
+        img {
+            @include img-rounded(42px) ; 
+            margin: 5px;
+        }
+
+        .action {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            img {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+        }
+    }
+}

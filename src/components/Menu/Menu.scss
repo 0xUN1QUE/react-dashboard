@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss"  ;
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+    border-right: 2px solid $soft-bg;
+
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .title {
+            color: $soft-color;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .item {
+            text-decoration: none;
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            padding: 10px 15px 10px 20px;
+            .label {
+                color: $main-color;
+                font-weight: 500;
+            }
+            &:hover {
+                border-radius: 6px;
+                background-color: $soft-bg;
+            }
+        }
+
+    }
+    
+}
