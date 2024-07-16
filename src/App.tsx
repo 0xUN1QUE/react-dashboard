@@ -5,13 +5,14 @@ import "./styles/global.scss";
 import Home from "./pages/Home/Home";
 import Users from "./pages/Users/Users";
 import Products from "./pages/Products/Products";
+import SingleProduct from "./pages/SingleProduct/SingleProduct";
+import SingleUser from "./pages/SingleUser/SingleUser";
 
 
 // Components : 
 import Menu from "./components/Menu/Menu";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Show from "./components/Show/Show";
 
 function App() {
   let Layout = () => {
@@ -48,8 +49,12 @@ function App() {
           element : <Products />
         } , 
         {
-          path : '/:slug/:id' , 
-          element : <Show />
+          path : '/products/:id' , 
+          element : <SingleProduct />
+        } ,
+        {
+          path : '/users/:id' ,
+          element : <SingleUser />
         }
       ]
     }

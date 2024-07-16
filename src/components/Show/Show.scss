@@ -1,18 +1,34 @@
+@import "../../styles/breakpoints.scss" ;
+
 .show {
-    padding: 20px;
     display: flex;
     gap: 50px;
+    @include lg {
+        flex-direction: column;
+    }
 
     .view {
         flex: 1;
+        max-width: 100%;
         .header {
             display: flex;
             align-items: flex-start;
             gap: 20px;
+            flex: 1;
+            @include lg {
+                align-items: center;
+                gap: 5px;
+            }
+            h1 {
+                @include lg {
+                    font-size: 24px;
+                }
+            }
             img {
                 border-radius: 20%;
                 width: 100px;
                 height: 100px;
+                object-fit: cover;
             }
             button {
                 padding: 10px 15px;
@@ -30,6 +46,7 @@
                 margin-bottom: 20px;
                 .label {
                     font-weight: bold;
+                    text-transform: capitalize;
                 }
                 .value {
                     font-style: 14px;
@@ -46,6 +63,9 @@
         .chart {
             height: 400px;
             width: 100%;
+            @include md {
+                display: none;
+            }
         }
 
     }

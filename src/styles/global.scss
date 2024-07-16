@@ -1,5 +1,6 @@
 @import "./variables.scss"  ; 
 @import "./mixing.scss" ;
+@import "./breakpoints.scss" ;
 
 * {
     -webkit-box-sizing: border-box;
@@ -26,6 +27,9 @@
         }
         .menuContainer {
             width: 250px ; 
+            @include lg {
+                width: fit-content;
+            }
         }
     }
 

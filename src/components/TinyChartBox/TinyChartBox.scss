@@ -1,9 +1,14 @@
 @import "../../styles/variables.scss";
+@import "../../styles/breakpoints.scss";
 
 .TinyChartBox {
     display : flex ;
     height : 100% ; 
     color: $main-color;
+    @include xxl {
+        flex-direction: column;
+        gap: 20px;
+    }
     .infoBox {
         flex: 3;
         display: flex;

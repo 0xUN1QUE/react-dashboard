@@ -1,5 +1,6 @@
 @import "../../styles/variables.scss" ; 
 @import "../../styles/mixing.scss" ; 
+@import "../../styles/breakpoints.scss" ; 
 
 .navbar {
     padding: 10px;
@@ -22,7 +23,13 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            @include md {
+                & > img {
+                    display: none;   
+                }
+            }
             .bell {
+                display: flex !important;
                 position: relative;
                 span {
                     position: absolute;
